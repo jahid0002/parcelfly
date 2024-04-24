@@ -67,14 +67,14 @@ class ViewTwo extends StatelessWidget {
                     'Please create an account or sign in to your',
                     style: Theme.of(context)
                         .textTheme
-                        .displaySmall!
+                        .headlineMedium!
                         .copyWith(color: AppColor.blackColor),
                   ), 
                    Text(
                     'existing account to start parcel delivery.',
                     style: Theme.of(context)
                         .textTheme
-                        .displaySmall!
+                        .headlineMedium!
                         .copyWith(color: AppColor.blackColor),
                   ),  
                   SizedBox(

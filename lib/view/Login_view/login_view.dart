@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                             .copyWith(color: AppColor.blackColor.withOpacity(.8), fontSize: 16, fontWeight: FontWeight.w400),
                       ),  
                SizedBox(height: size.height*0.03,), 
-               CustomTextField(hinttext: 'Enter Your Email', controller: emaiController), 
+               CustomTextField(hinttext: 'Enter Your Email', controller: emaiController, icon: const SizedBox(height: 4,),), 
                 SizedBox(height: size.height*0.01,),
                 CustomTextField(hinttext: 'Enter Your Password', controller: emaiController ,
                 obscureText: true, 
@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
              mainAxisAlignment: MainAxisAlignment.spaceBetween, 
               children: [ 
               const SizedBox(), 
-              Text('Forgot Password?', style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w600),)
+              Text('Forgot Password?', style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),)
             ],)
             ],
           ),
@@ -65,7 +65,8 @@ class LoginPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [ 
-                    Icon(Icons.call, size: 16,color: AppColor.redColor,),
+                    Icon(Icons.call_outlined, size: 16,color: AppColor.redColor,), 
+                    SizedBox(width: size.width * 0.01,),
                     Text('Login with phone number', style: Theme.of(context).textTheme.displaySmall!.copyWith(color: AppColor.redColor),),
                    
                   ],

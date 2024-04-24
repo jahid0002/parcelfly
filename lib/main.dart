@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:parcelfly/Route/page_route.dart';
+import 'package:parcelfly/const/color.dart';
 import 'package:parcelfly/utils/text_theme.dart';
 
 
@@ -20,9 +21,10 @@ class MyApp extends StatelessWidget {
       builder:(context, child)=> GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'parcelfly',
-        theme: ThemeData(
+        theme: ThemeData( 
+          bottomAppBarTheme: BottomAppBarTheme(color: AppColor.whiteColor),
          textTheme: AppTextTheme.textTheme,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColor.redColor),
           useMaterial3: true,
         ),
         initialRoute: '/', 

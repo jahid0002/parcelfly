@@ -1,5 +1,7 @@
 
 
+
+
 import 'package:flutter/material.dart';
 import 'package:parcelfly/const/color.dart';
 
@@ -14,30 +16,35 @@ class CustomTextField extends StatelessWidget {
 
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
+  //   final size = MediaQuery.of(context).size;
     return TextFormField( 
       obscureText: obscureText,
          controller: controller, 
          decoration: InputDecoration(  
+          isDense:true , 
+         // isCollapsed: true,
           // ignore: prefer_if_null_operators, unnecessary_null_comparison, unnecessary_null_in_if_null_operators
           suffixIcon: icon?? null, 
-
+    
           filled: true,  
-          fillColor: AppColor.whiteColor, 
+          fillColor: AppColor.whiteColor,  
+        contentPadding: EdgeInsets.only(top: 5, bottom: 5, left: 15), 
           hintText: hinttext, 
           hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: AppColor.hintText), 
           border: OutlineInputBorder( 
             borderRadius: BorderRadius.circular(5),   
-            borderSide: BorderSide(width: 2, color: AppColor.redColor), 
+            borderSide: BorderSide(width: 1, color: AppColor.redColor), 
     
           ), 
           enabledBorder:  OutlineInputBorder( 
             borderRadius: BorderRadius.circular(5),   
-            borderSide: BorderSide(width: 2, color: AppColor.blackColor.withOpacity(.1)), 
+            borderSide: BorderSide(width: 1, color: AppColor.blackColor.withOpacity(.1)), 
     
           ), 
           )
          
     );
   }
-}
+} 
+

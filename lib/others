@@ -1,0 +1,24 @@
+
+
+  useLegacyColorScheme: false,
+          currentIndex: 0,
+          backgroundColor: AppColor.whiteColor,
+          elevation: 2,
+          onTap: (value) {},
+          selectedItemColor: AppColor.redColor,
+          unselectedItemColor: AppColor.blackColor,
+          selectedFontSize: 12,
+          unselectedFontSize: 12,
+          unselectedLabelStyle:
+              TextStyle(fontSize: 12, color: AppColor.blackColor),
+          showUnselectedLabels: true,
+          items: const [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.dashboard_outlined), label: 'Dashborad'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.paid_outlined), label: 'Payment'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_basket_outlined), label: 'Parcel'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person_outline), label: 'Profile'),
+          ],

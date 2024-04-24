@@ -169,7 +169,7 @@ class Dashbroad extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Panding Parcel',
+                              'Panding Parcels',
                               style: Theme.of(context)
                                   .textTheme
                                   .displayMedium!
@@ -198,7 +198,11 @@ class Dashbroad extends StatelessWidget {
                         ), 
           
                         Expanded(
-                          child: ListView.builder ( 
+                          
+                          child: ListView.builder (    
+                            clipBehavior: Clip.hardEdge,
+                            physics: const BouncingScrollPhysics(),
+                            shrinkWrap: true,
                             itemCount: 3,
                             itemBuilder: (context, index){ 
                             return CustomListTile(imagePath: 'assets/images/Rectangle 814225.png', productName: 'Exclusive Cotton Fiber Head Pillow', productSize: 'Size: 34”, Weight: 2.5K', productPrice: '\$1254.89');
@@ -238,10 +242,10 @@ class Dashbroad extends StatelessWidget {
                    Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                     CustomEaringList(symbol: '\$', type: 'Earning', total: '\$560'), 
+                     CustomEaringList(svgImagePath: 'assets/images/dollar-square.svg', type: 'Earning', total: '\$560'), 
                      
-                    CustomEaringList(symbol: '%', type: 'Collection', total: '\$360'),
-                    CustomEaringList(symbol: '#', type: 'Balance', total: '\$5060'),
+                    CustomEaringList(svgImagePath: 'assets/images/percentage-square.svg', type: 'Collection', total: '\$360'),
+                    CustomEaringList(svgImagePath: 'assets/images/wallet.svg', type: 'Balance', total: '\$5060'),
                    ],)
                   ],
                 ),
